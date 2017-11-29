@@ -702,7 +702,7 @@ public class naverConnection {
 				local.setCategory(category);
 				local.setDescription(description);
 				local.setTelephone(telephone);
-				local.setAddress(roadAddress);
+				local.setAddress(address);
 				local.setRoadAddress(roadAddress);
 				local.setMapx(Integer.parseInt(mapx));
 				local.setMapy(Integer.parseInt(mapy));
