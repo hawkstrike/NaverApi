@@ -47,5 +47,11 @@ public class naverEncyc {
 	public void setThumbnail(String thumbnail) {
 		this.thumbnail = thumbnail;
 	}
+
+	@Override
+	public String toString() {
+		return "naverEncyc [title=" + title + ", link=" + link + ", description=" + description + ", thumbnail="
+				+ thumbnail + "]";
+	}
 	
 }

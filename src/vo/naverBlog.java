@@ -3,22 +3,22 @@ package vo;
 public class naverBlog {
 	private String title; // 문서 제목
 	private String link; // 문서 링크
-	private String postdate; // 블로그 포스트 작성 날짜
 	private String description; // 문서의 내용을 요약한 패시지 정보
 	private String bloggername; // 포스트를 작성한 블로거의 이름
 	private String bloggerlink; // 포스트를 작성한 블로거의 링크
+	private String postdate; // 블로그 포스트 작성 날짜
 	
 	public naverBlog() {
 	}
 
-	public naverBlog(String title, String link, String postdate, String description, String bloggername,
-			String bloggerlink) {
+	public naverBlog(String title, String link, String description, String bloggername,
+			String bloggerlink, String postdate) {
 		this.title = title;
 		this.link = link;
-		this.postdate = postdate;
 		this.description = description;
 		this.bloggername = bloggername;
 		this.bloggerlink = bloggerlink;
+		this.postdate = postdate;
 	}
 
 	public String getTitle() {

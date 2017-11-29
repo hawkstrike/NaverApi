@@ -3,6 +3,7 @@ package vo;
 public class naverLocal {
 	private String title; // 업체, 기관명
 	private String link; // 업체, 기관의 상세 정보가 제공되는 링크
+	private String category; // 검색 결과 업체, 기관의 분류 정보
 	private String description; // 업체, 기관명에 대한 설명
 	private String telephone; // 업체, 기관명의 전화번호
 	private String address; // 업체, 기관명의 주소
@@ -13,10 +14,11 @@ public class naverLocal {
 	public naverLocal() {
 	}
 
-	public naverLocal(String title, String link, String description, String telephone, String address,
+	public naverLocal(String title, String link, String category, String description, String telephone, String address,
 			String roadAddress, int mapx, int mapy) {
 		this.title = title;
 		this.link = link;
+		this.category = category;
 		this.description = description;
 		this.telephone = telephone;
 		this.address = address;
@@ -39,6 +41,14 @@ public class naverLocal {
 
 	public void setLink(String link) {
 		this.link = link;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
 	public String getDescription() {
@@ -87,6 +97,13 @@ public class naverLocal {
 
 	public void setMapy(int mapy) {
 		this.mapy = mapy;
+	}
+
+	@Override
+	public String toString() {
+		return "naverLocal [title=" + title + ", link=" + link + ", category=" + category + ", description="
+				+ description + ", telephone=" + telephone + ", address=" + address + ", roadAddress=" + roadAddress
+				+ ", mapx=" + mapx + ", mapy=" + mapy + "]";
 	}
 	
 }

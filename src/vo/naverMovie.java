@@ -7,19 +7,32 @@ public class naverMovie {
 	private String subtitle; // 영화의 영문 제목
 	private String pubDate; // 영화의 제작년도
 	private String director; // 영화의 감독
+	private String actor; // 영화 출연 배우
 	private int userRating; // 영화에 대한 유저들의 평점
 	
 	public naverMovie() {
 	}
 
-	public naverMovie(String title, String link, String image, String subtitle, String pubDate, String director,
+	public naverMovie(String title, String link, String subtitle, String pubDate, String director, String actor,
 			int userRating) {
+		this.title = title;
+		this.link = link;
+		this.subtitle = subtitle;
+		this.pubDate = pubDate;
+		this.director = director;
+		this.actor = actor;
+		this.userRating = userRating;
+	}
+
+	public naverMovie(String title, String link, String image, String subtitle, String pubDate, String director,
+			String actor, int userRating) {
 		this.title = title;
 		this.link = link;
 		this.image = image;
 		this.subtitle = subtitle;
 		this.pubDate = pubDate;
 		this.director = director;
+		this.actor = actor;
 		this.userRating = userRating;
 	}
 
@@ -71,12 +84,27 @@ public class naverMovie {
 		this.director = director;
 	}
 
+	public String getActor() {
+		return actor;
+	}
+
+	public void setActor(String actor) {
+		this.actor = actor;
+	}
+
 	public int getUserRating() {
 		return userRating;
 	}
 
 	public void setUserRating(int userRating) {
 		this.userRating = userRating;
+	}
+
+	@Override
+	public String toString() {
+		return "naverMovie [title=" + title + ", link=" + link + ", image=" + image + ", subtitle=" + subtitle
+				+ ", pubDate=" + pubDate + ", director=" + director + ", actor=" + actor + ", userRating=" + userRating
+				+ "]";
 	}
 	
 }

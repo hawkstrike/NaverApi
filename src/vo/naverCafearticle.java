@@ -57,5 +57,11 @@ public class naverCafearticle {
 	public void setCafeurl(String cafeurl) {
 		this.cafeurl = cafeurl;
 	}
+
+	@Override
+	public String toString() {
+		return "naverCafearticle [title=" + title + ", link=" + link + ", description=" + description + ", cafename="
+				+ cafename + ", cafeurl=" + cafeurl + "]";
+	}
 	
 }

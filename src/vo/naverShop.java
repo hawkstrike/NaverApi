@@ -7,6 +7,7 @@ public class naverShop {
 	private int lprice; // 최저가 정보 없으면 0으로 표시
 	private int hprice; // 최고가 정보 없으면 0으로 표시
 	private String mallName; // 상품을 판매하는 쇼핑몰의 상호
+	private int productId; // 해당 상품에 대한 id
 	/*
 	 * 일반상품
 	 * 1 - 가격비교 상품
@@ -28,12 +29,12 @@ public class naverShop {
 	 * 11 - 가격비교 비매칭 일반상품
 	 * 12 - 가격비교 매칭 일반상품
 	 */
-	private int productId;
+	private int productType;
 	
 	public naverShop() {
 	}
 
-	public naverShop(String title, String link, String image, int lprice, int hprice, String mallName, int productId) {
+	public naverShop(String title, String link, String image, int lprice, int hprice, String mallName, int productId, int productType) {
 		this.title = title;
 		this.link = link;
 		this.image = image;
@@ -41,6 +42,7 @@ public class naverShop {
 		this.hprice = hprice;
 		this.mallName = mallName;
 		this.productId = productId;
+		this.productType = productType;
 	}
 
 	public String getTitle() {
@@ -97,6 +99,20 @@ public class naverShop {
 
 	public void setProductId(int productId) {
 		this.productId = productId;
+	}
+
+	public int getProductType() {
+		return productType;
+	}
+
+	public void setProductType(int productType) {
+		this.productType = productType;
+	}
+
+	@Override
+	public String toString() {
+		return "naverShop [title=" + title + ", link=" + link + ", image=" + image + ", lprice=" + lprice + ", hprice="
+				+ hprice + ", mallName=" + mallName + ", productId=" + productId + ", productType=" + productType + "]";
 	}
 	
 }

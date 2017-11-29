@@ -3,15 +3,15 @@ package vo;
 public class naverWebkr {
 	private String title; // 문서의 제목
 	private String link; // 문서의 링크
-	private String descrption; // 문서의 내용을 요약한 패시지 정보
+	private String description; // 문서의 내용을 요약한 패시지 정보
 	
 	public naverWebkr() {
 	}
 
-	public naverWebkr(String title, String link, String descrption) {
+	public naverWebkr(String title, String link, String description) {
 		this.title = title;
 		this.link = link;
-		this.descrption = descrption;
+		this.description = description;
 	}
 
 	public String getTitle() {
@@ -30,12 +30,17 @@ public class naverWebkr {
 		this.link = link;
 	}
 
-	public String getDescrption() {
-		return descrption;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDescrption(String descrption) {
-		this.descrption = descrption;
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	@Override
+	public String toString() {
+		return "naverWebkr [title=" + title + ", link=" + link + ", description=" + description + "]";
 	}
 	
 }

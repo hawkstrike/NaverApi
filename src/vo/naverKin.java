@@ -3,15 +3,15 @@ package vo;
 public class naverKin {
 	private String title; // 문서 제목
 	private String link; // 문서 링크
-	private String descpriton; // 문서의 내용을 요약한 패시지 정보
+	private String description; // 문서의 내용을 요약한 패시지 정보
 	
 	public naverKin() {
 	}
 
-	public naverKin(String title, String link, String descpriton) {
+	public naverKin(String title, String link, String description) {
 		this.title = title;
 		this.link = link;
-		this.descpriton = descpriton;
+		this.description = description;
 	}
 
 	public String getTitle() {
@@ -30,12 +30,17 @@ public class naverKin {
 		this.link = link;
 	}
 
-	public String getDescpriton() {
-		return descpriton;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDescpriton(String descpriton) {
-		this.descpriton = descpriton;
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	@Override
+	public String toString() {
+		return "naverKin [title=" + title + ", link=" + link + ", description=" + description + "]";
 	}
 	
 }

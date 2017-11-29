@@ -8,15 +8,15 @@ public class naverBook {
 	private int price; // 정가 정보
 	private int discount; // 할인 가격 정보
 	private String publisher; // 출판사 정보
+	private String pubdate; // 출간일 정보
 	private String isbn; // isbn 숫자
 	private String description; // 문서의 내용을 요약한 패시지 정보
-	private String pubdate; // 출간일 정보
 	
 	public naverBook() {
 	}
 
 	public naverBook(String title, String link, String image, String author, int price, int discount, String publisher,
-			String isbn, String description, String pubdate) {
+			String pubdate, String isbn, String description) {
 		this.title = title;
 		this.link = link;
 		this.image = image;
@@ -24,9 +24,9 @@ public class naverBook {
 		this.price = price;
 		this.discount = discount;
 		this.publisher = publisher;
+		this.pubdate = pubdate;
 		this.isbn = isbn;
 		this.description = description;
-		this.pubdate = pubdate;
 	}
 
 	public String getTitle() {
@@ -107,6 +107,13 @@ public class naverBook {
 
 	public void setPubdate(String pubdate) {
 		this.pubdate = pubdate;
+	}
+
+	@Override
+	public String toString() {
+		return "naverBook [title=" + title + ", link=" + link + ", image=" + image + ", author=" + author + ", price="
+				+ price + ", discount=" + discount + ", publisher=" + publisher + ", pubdate=" + pubdate + ", isbn="
+				+ isbn + ", description=" + description + "]";
 	}
 	
 }
